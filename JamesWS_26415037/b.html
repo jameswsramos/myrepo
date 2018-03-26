@@ -1,0 +1,121 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width">
+	<link rel = "stylesheet" href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<script src = "demos/js/jquery.js"></script>
+	<script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="d.css">
+	<div class="tab">
+</div>
+</head>
+<body>
+	<h1 style="color:blue;font-family: Helvetica, Sans-Serif";> Test 1 PPM </h1>
+	<style>
+.tablist-left {width: 25%; display: inline-block; }
+.tablist-content {width: 60%; display: inline-block; vertical-align: top;
+margin-left: 5%; }
+</style>
+<style>
+
+
+
+
+
+
+
+	.calc2 input[type=text], .calc2 input[type=number] { padding-left:8px; }
+	@media all and (max-width: 576px) {
+		.calc2 button { padding:7px 4px; }
+		.calc2 input[type=text], .calc2 input[type=number] { font-size:xx-large; width:258px; }
+		.calc2 { width:100%; padding:20px; }
+		.calc2 tr:nth-child(2) td { margin-top:-5px; padding-bottom:8px;}
+	}
+</style>
+<!-- #EndEditable -->
+
+</head>
+
+<body>
+		
+</div>
+	
+<div id="lcol">
+
+	<div id="doc">
+	<!-- #BeginEditable "doctext" -->
+	<h1 style="font-family: Helvetica, Sans-Serif">Hex to RGB Color Conversion</h1>
+	<h2 style="font-family: Helvetica, Sans-Serif">Hex to RGB converter</h2>
+	<p style="font-family: Helvetica, Sans-Serif">Enter 6 digits hex color code and press the <i>Convert</i> button:</p>
+	<form name="calcform">
+	<table style="font-family: Helvetica, Sans-Serif" class="calc2">
+		<tr>
+			<td >Hex color code (#RRGGBB):</td>
+			<td><input type="text" name="hex" class="intext" placeholder="000000" tabindex="1" autofocus></td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+		  	<td>
+				<button style="font-family: Helvetica, Sans-Serif" type="button" title="Convert" class="btn" tabindex="2" onclick="calc()"><img src="/lib/icons/glyphicons_all/glyphicons_halflings/glyphicons_halflings_030_refresh.png" alt=""> Convert</button>
+				<button style="font-family: Helvetica, Sans-Serif" type="reset" title="Reset" class="btn" tabindex="3" onclick="clr()"><img src="/lib/icons/glyphicons_all/glyphicons_halflings/glyphicons_halflings_013_remove.png" alt=""> Reset</button>
+				<button style="font-family: Helvetica, Sans-Serif" type="button" title="Swap conversion" tabindex="4" class="btn" onclick="location.href='rgb-to-hex.html';"><img src="/lib/icons/glyphicons_all/glyphicons_halflings/glyphicons_halflings_114_retweet.png" alt=""> Swap</button>
+		  	</td>
+		</tr>
+		<tr>
+			<td>Red color (R):</td>
+			<td><input type="text" name="r" class="outtext" tabindex="5" readonly></td>
+		</tr>
+		<tr>
+			<td>Green color (G):</td>
+			<td><input type="text" name="g" class="outtext" tabindex="6" readonly></td>
+		</tr>
+		<tr>
+			<td>Blue color (B):</td>
+			<td><input type="text" name="b" class="outtext" tabindex="7" readonly></td>
+		</tr>
+		<tr>
+			<td>CSS color:</td>
+			<td><input type="text" name="css" class="outtext" tabindex="8" readonly></td>
+		</tr>
+		<tr>
+			<td>Color preview:</td>
+			<td><input type="text" name="color" style="height:50px; border:1px solid black" readonly></td>
+		</tr>
+	</table>
+	</form>			
+	
+<script type="text/javascript">
+		<!--
+		function clr()
+		{
+			document.calcform.reset();
+			document.calcform.color.style.backgroundColor="#FFFFFF";
+		}
+		function calc() 
+		{
+			hex = document.calcform.hex.value;
+			if( hex=="" ) hex="000000";
+			if( hex.charAt(0)=="#" ) hex=hex.substring(1,hex.length);
+			if( hex.length!=6 )
+			{
+				alert("Please enter 6 digits color code !");
+				return;
+			}
+			r = hex.substring(0,2);
+			g = hex.substring(2,4);
+			b = hex.substring(4,6);
+			r = parseInt(r, 16);
+			g = parseInt(g, 16);
+			b = parseInt(b, 16);
+			document.calcform.r.value = r;
+			document.calcform.g.value = g;
+			document.calcform.b.value = b;
+			document.calcform.css.value = "rgb("+r+","+g+","+b+")";
+		 	document.calcform.color.style.backgroundColor='#'+hex;
+		}
+		//-->
+	</script>
+
+</div>
+
+</body>
+</html>

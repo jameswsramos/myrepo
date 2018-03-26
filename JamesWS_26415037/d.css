@@ -1,0 +1,141 @@
+<style type= "text/css">
+	.ui-bar-z {
+		color = black;
+		background-color = grainsboro;
+	}
+	.ui-body-z {
+		font-style = regular;
+		font-family = Helvetica;
+	}
+	.ui-shadow-inset, ui-corner-all, ui-btn-shadow, ui-body-c
+{
+   background-color: #D5EEFF !important;
+}
+.slidecontainer {
+    width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 25px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */ 
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+</style>
+
+<style>
+#breadcrumb {
+padding: 0;
+line-height: 40px;
+background: #525252;
+background: #5A8DB6 url(//dpidudyah7i0b.cloudfront.net/devops/img/devoops_pattern_b10.png) 0 0 repeat;
+}
+.breadcrumb > li > a:hover, .breadcrumb > li:last-child > a {
+color: #D8D8D8;
+}
+.breadcrumb > li > a {
+color: #D8D8D8;
+}
+.breadcrumb > li + li::before {
+padding: 0 5px;
+content:"";
+}
+</style>
+<style>
+ins {
+	text-decoration:none;
+}
+code {
+white-space: pre-wrap;
+word-break: normal;
+}
+#social_buttons {
+position: fixed;
+z-index: 100;
+bottom: 0;
+right: 0;
+width: 80px;
+background: rgba(255,255,255,.65);
+-webkit-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.45);
+-moz-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.45);
+box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.45);
+padding: 15px;
+}
+#social_buttons .socialbutton {
+padding: 10px 0;
+}
+</style>
+<style>
+.colorinput {
+    width:105px;
+    padding:25px 0 15px 0;
+}
+.colorslider {
+    padding:30px 25px 15px 20px;
+}
+.tableslider {
+    width:100%;
+    border-collapse:collapse;
+}
+.pointer {
+    text-align:center;display:none;position:absolute;top:-14px;left:-2px;
+}
+.pointer div{
+    background-color:#ffffff;     
+    border:1px solid #aaaaaa;
+    height:24px;
+    width:40px;
+    padding:2px 4px;
+    position:absolute;
+    text-align:center;
+    top:-14px;
+    left:-15px;
+    color:#000000;   
+    border-radius:4px;
+    font:14px verdana;
+}
+.pointer div::selection {
+    color: #000000;
+    background: #ffffff;
+}
+.pointer i{
+    color:#aaaaaa
+}
+@media screen and (max-width:600px) {
+    .colorinput {
+        padding:25px 0 0 0;
+    }
+    .colorslider {
+        width:100%;
+        padding:30px 25px 15px 20px;
+    }
+}
+</style>

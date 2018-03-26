@@ -1,0 +1,354 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width">
+	<link rel = "stylesheet" href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<script src = "demos/js/jquery.js"></script>
+	<script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="d.css">
+	<div class="tab">
+</div>
+</head>
+<body>
+	<h1 style="color:black;font-family: Helvetica, Sans-Serif""> Test 1 PPM </h1>
+	<style>
+.tablist-left {width: 25%; display: inline-block; }
+.tablist-content {width: 60%; display: inline-block; vertical-align: top;
+margin-left: 5%; }
+</style>
+<h2 style="color:red; font-family: Bebas Neue, Sans-Serif"> Kalkulator </h2>
+<script id="popup-arrow-script">
+	$.mobile.document.on( "click", "#open-popupArrow", function( evt ) {
+		$( "#popupArrow" ).popup( "open", { x: evt.pageX, y: evt.pageY } );
+		evt.preventDefault();
+	});
+	</script>
+</script>
+	<style id="popup-arrow-css">
+	.clickable-area {
+		display: block;
+		width: 100%;
+		height: 300px;
+		background-color: #ffefef;
+	}
+	.clickable-area:focus {
+		outline: 0;
+	}
+	</style>
+	<style id="tooltip-btn">
+	.ui-btn.my-tooltip-btn,
+	.ui-btn.my-tooltip-btn:hover,
+	.ui-btn.my-tooltip-btn:active {
+		background: none;
+		border: 0;
+	}
+	</style>
+	  <style id="full-width-slider">
+        /* Hide the number input */
+        .full-width-slider input {
+            display: none;
+        }
+        .full-width-slider .ui-slider-track {
+            margin-left: 15px;
+        }
+    </style>
+	<script id="dynamic-slider">
+$( document ).on( "pagecreate", function() {
+	$( "<input type='number' data-type='range' min='0' max='100' step='1' value='17'>" )
+		.appendTo( "#dynamic-slider-form" )
+		.slider()
+		.textinput()
+});
+	</script>
+	<style id="custom-icon">
+        .ui-icon-custom:after {
+			background-image: url("../_assets/img/glyphish-icons/21-skull.png");
+			background-position: 3px 3px;
+			background-size: 70%;
+		}
+    </style>
+</form>
+<div data-role=page id=win1>
+		<div data-role= header>
+			<h1 style="color:blue;font-family: Bebas Neue, Sans-Serif";> Menu </h1>
+		</div>
+		<div data-role="navbar">
+<ul style="color:blue;font-family: Lato, Sans-Serif";>
+<li><a href="#" data-ajax="false">Tab one</a></li>
+<li><a href="b.html" data-ajax="false">Tab two</a></li>
+<li><a href="c.html" data-ajax="false">Tab three</a></li>
+</ul>
+<div class="slidecontainer">
+  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+</div>
+<style>
+	.calc { padding:16px; font-size:medium; }
+	.calc select { padding:7px; font-size:medium; }
+	.calc textarea { width:300px; padding:5px; font-size:large; }
+	.calc button { font-size:medium; }
+	.calc tr td { width:300px; }
+	#bit { background:#ffffcc; border-collapse:collapse; }
+	#bit tr:first-child { font-size:x-small; }
+	#bit td { text-align:center; background:#ffffcc; padding:4px; }
+	#bit tr:nth-child(1) td { border:none; background:#f0f0c0;}
+	#bit tr:nth-child(2) td { border:1px solid #ccc; cursor:pointer; cursor:hand; }
+	@media all and (max-width: 576px) {
+		.calc { width:100%; box-sizing: border-box; }
+		.calc textarea { width:100%; font-size:x-large; }
+		.calc tr td { width:calc(100% - 30px); }
+		.calc tr td:nth-child(3) { padding-top:20px; }
+	}
+	.ntable tr td:nth-child(-n+3) { width:70px; }
+	.ntable thead { position:sticky; top:0; background:#f0f0f0; }
+</style>
+<!-- #EndEditable -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2665076-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+
+	
+<div id="lcol">
+
+	<div id="doc">
+	<!-- #BeginEditable "doctext" -->
+	<h1>Hex,decimal, binary converter</h1>
+	<form name="calcform">
+	<table class="calc">
+	  <tbody>
+	  <tr>
+		<td colspan="2"><label for="format">Number format:</label></td>
+	  </tr>
+	  <tr>
+		<td colspan="2">
+			<select id="format" name="format">
+				<option>Number</option>
+				<option>Signed 8-bit</option>
+				<option>Signed 16-bit</option>
+				<option>Signed 32-bit</option>
+				<option>Signed 64-bit</option>
+			</select>
+		</td>
+	  </tr>
+	  <tr>
+		<td colspan="2"><label for="hex">Hex:</label></td>
+	  </tr>
+	  <tr>
+		<td><textarea rows="2" id="hex" name="hex" oninput="input(1)" autofocus tabindex="1"></textarea></td>
+		<td class="mathsymbol"><sub>16</sub></td>
+	  </tr>
+	  <tr>
+		<td colspan="2"><label for="dec">Decimal:</label></td>
+	  </tr>
+	  <tr>
+		<td><textarea rows="2" id="dec" name="dec" oninput="input(2)" tabindex="2"></textarea></td>
+		<td class="mathsymbol"><sub>10</sub></td>
+	  </tr>
+	  <tr>
+		<td colspan="2"	><label for="bin">Binary:</label></td>
+	  </tr>
+	  <tr>
+		<td><textarea rows="2" id="bin" name="bin" oninput="input(4)" tabindex="4"></textarea></td>
+		<td class="mathsymbol"><sub>2</sub></td>
+	  </tr>
+		</td>
+	  </tr>
+	  </tbody>
+	</table>
+	</form>
+	
+	<script src="/lib/bignumber/bignumber.min.js"></script>
+	<script>
+		var num;
+		var c = document.getElementsByClassName("calc")[0];
+		c.rows[10].style.display = "none";
+		c.rows[11].style.display = "none";
+		window.onload = function() {
+			var format = document.getElementById("format");
+			num = new BigNumber(0);
+			format.onchange = function() {
+				var i=this.selectedIndex;
+				var bits=32;
+				var width=594;
+				var calc = document.getElementsByClassName("calc")[0];
+				if( i==0 || i==4 ) {
+					calc.rows[10].style.display = "none";
+					calc.rows[11].style.display = "none";
+				}
+				else {
+					calc.rows[10].style.display = "";
+					calc.rows[11].style.display = "";
+				}
+				if( i==1 ) { bits=8; width=149; }
+				if( i==2 ) { bits=16; width=297; }
+				var table = document.getElementById("bit");
+	 			for(var k=0; k<32-bits; k++) {
+					table.rows[0].cells[k].style.display = "none";
+					table.rows[1].cells[k].style.display = "none";
+				}
+	 			for(var k=32-bits; k<32; k++) {
+					table.rows[0].cells[k].style.display = "";
+					table.rows[1].cells[k].style.display = "";
+				}
+				table.style.width = width+"px";
+				input(2);
+			};
+			var table = document.getElementById("bit");
+			var len=32;
+ 			for (var i=0; i<len; i++) {
+				table.rows[1].cells[i].onclick = function() {
+					var b=this.innerHTML;
+					var k=31-this.cellIndex;
+					var mask = new BigNumber(2);
+					mask = mask.pow(k);
+					if( b=="0" ) {
+						this.innerHTML="1";
+						num = num.add(mask);
+					}
+					else {
+						this.innerHTML="0";
+						num = num.sub(mask);
+					}
+					document.calcform.hex.value = num.toString(16).toUpperCase();
+					input(1);
+ 				};
+			}
+		}
+		function resetall() {
+			document.calcform.hex.value = "";
+			document.calcform.dec.value = "";
+			document.calcform.oct.value = "";
+			document.calcform.bin.value = "";
+			var table = document.getElementById("bit");
+			num =  new BigNumber(0);
+ 			for(var k=0; k<32; k++) {
+				table.rows[1].cells[k].innerHTML = "0";
+			}
+		}
+		function input(i) {
+			var ifmt = document.calcform.format.selectedIndex;
+			var hex = document.calcform.hex.value;
+			var dec = document.calcform.dec.value;
+			var oct = document.calcform.oct.value;
+			var bin = document.calcform.bin.value;
+			var x;
+			document.getElementById("hex").style.backgroundColor = "white";
+			document.getElementById("dec").style.backgroundColor = "white";
+			document.getElementById("oct").style.backgroundColor = "white";
+			document.getElementById("bin").style.backgroundColor = "white";
+			if( i==1 ) {
+				if( hex=="" ) { resetall(); return; }
+				try {
+					x = new BigNumber(hex, 16);
+					x = comptonum(x);
+					if( x=="" ) { throw ""; }
+				}
+				catch(err) {
+					document.getElementById("hex").style.backgroundColor = "#fff0f0";
+					return;
+				}
+			}
+			if( i==2 ) {
+				if( dec=="" ) { resetall(); return; }
+				try {
+					x = new BigNumber(dec, 10);
+				}
+				catch(err) {
+					document.getElementById("dec").style.backgroundColor = "#fff0f0";
+					return;
+				}
+			}
+			if( i==3 ) {
+				if( oct=="" ) { resetall(); return; }
+				try {
+					x = new BigNumber(oct, 8);
+				}
+				catch(err) {
+					document.getElementById("oct").style.backgroundColor = "#fff0f0";
+					return;
+				}
+			}
+			if( i==4 ) {
+				if( bin=="" ) { resetall(); return; }
+				try {
+					x = new BigNumber(bin, 2);
+					x = comptonum(x);
+					if( x=="" ) { throw ""; }
+				}
+				catch(err) {
+					document.getElementById("bin").style.backgroundColor = "#fff0f0";
+					return;
+				}
+			}
+			var y = numtocomp(x);
+			if( i!=1 ) document.calcform.hex.value = y.toString(16).toUpperCase();
+			if( i!=2 ) document.calcform.dec.value = x.toString(10);
+			if( i!=3 ) document.calcform.oct.value = x.toString(8);
+			if( i!=4 ) document.calcform.bin.value = y.toString(2);
+			
+			setbits(x);
+		}
+		function comptonum(x) {
+			var ifmt = document.calcform.format.selectedIndex;
+			var y = new BigNumber(x);
+			if( ifmt>0 ) {
+				var look=["0","256","65536","4294967296","18446744073709551616"];
+				var max=["0","127","32767","2147483647","9223372036854775807"];
+				if( x.gt(max[ifmt]) ) y=y.sub(look[ifmt]);
+				if( x.isNeg() || x.gte(look[ifmt]) ) y="";
+			}
+			return y;
+		}
+		function numtocomp(x) {
+			var ifmt = document.calcform.format.selectedIndex;
+			var y = new BigNumber(x);
+			x = new BigNumber(x);
+			if( ifmt>0 ) {
+				var look=["0","256","65536","4294967296","18446744073709551616"];
+				var min=["0","-128","-32768","-2147483648","-9223372036854775808"];
+				var max=["0","127","32767","2147483647","9223372036854775807"];
+				if( x.isNeg() ) y=y.add(look[ifmt]);
+				if( x.gt(max[ifmt]) || x.lt(min[ifmt]) ) y="";
+			}
+			return y;
+		}
+		function setbits(x) {
+			var table = document.getElementById("bit");
+			//!!!if( x!=Math.round(x) ) 
+			x = numtocomp(x);
+			x = x.toString(2);
+			var len=x.length;
+			if( len>32 )
+				x = x.substring(len-1-31,len-1);
+			
+			num = new BigNumber(0);
+			
+ 			for(var k=0; k<32-x.length; k++) {
+				table.rows[1].cells[k].innerHTML = "0";
+			}
+ 			for(var k=0; k<x.length; k++) {
+				table.rows[1].cells[k+32-x.length].innerHTML = x.charAt(k);
+				if( x.charAt(k)=="1" ) {
+					//var mask=Math.pow(2,x.length-1-k);
+					var mask = new BigNumber(2);
+					mask = mask.pow(x.length-1-k);
+					num = num.add(mask);
+				}
+			}
+		}
+</div>
+</div>
+</body>
+</html>

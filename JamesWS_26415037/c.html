@@ -1,0 +1,146 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width">
+	<link rel = "stylesheet" href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<script src = "demos/js/jquery.js"></script>
+	<script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="d.css">
+	<div class="tab">
+</div>
+</head>
+<body>
+	<h1 style="color:blue;font-family: Helvetica, Sans-Serif";> Test 1 PPM </h1>
+	<button tyle="color:blue;font-family: Helvetica, Sans-Serif" class="show-page-loading-msg" data-textonly="false" data-textvisible="false" data-msgtext="" data-inline="true">Calculator</button>
+<button tyle="color:blue;font-family: Helvetica, Sans-Serif" class="show-page-loading-msg" data-textonly="false" data-textvisible="true" data-msgtext="" data-inline="true">RGB</button>
+<button tyle="color:blue;font-family: Helvetica, Sans-Serif" class="show-page-loading-msg" data-textonly="true" data-textvisible="true" data-msgtext="Text only loader" data-inline="true">Rangkuman</button>
+<button tyle="color:blue;font-family: Helvetica, Sans-Serif" class="hide-page-loading-msg" data-inline="true" data-icon="delete">Hide</button>
+	<style>
+.tablist-left {width: 25%; display: inline-block; }
+.tablist-content {width: 60%; display: inline-block; vertical-align: top;
+margin-left: 5%; }
+</style>
+<script id="popup-arrow-script">
+	$.mobile.document.on( "click", "#open-popupArrow", function( evt ) {
+		$( "#popupArrow" ).popup( "open", { x: evt.pageX, y: evt.pageY } );
+		evt.preventDefault();
+	});
+	</script>
+</script>
+	<style id="popup-arrow-css">
+	.clickable-area {
+		display: block;
+		width: 100%;
+		height: 300px;
+		background-color: #ffefef;
+	}
+	.clickable-area:focus {
+		outline: 0;
+	}
+	</style>
+	<style id="tooltip-btn">
+	.ui-btn.my-tooltip-btn,
+	.ui-btn.my-tooltip-btn:hover,
+	.ui-btn.my-tooltip-btn:active {
+		background: none;
+		border: 0;
+	}
+	</style>
+	  <style id="full-width-slider">
+        /* Hide the number input */
+        .full-width-slider input {
+            display: none;
+        }
+        .full-width-slider .ui-slider-track {
+            margin-left: 15px;
+        }
+    </style>
+	<script id="dynamic-slider">
+$( document ).on( "pagecreate", function() {
+	$( "<input type='number' data-type='range' min='0' max='100' step='1' value='17'>" )
+		.appendTo( "#dynamic-slider-form" )
+		.slider()
+		.textinput()
+});
+	</script>
+	<style id="custom-icon">
+        .ui-icon-custom:after {
+			background-image: url("../_assets/img/glyphish-icons/21-skull.png");
+			background-position: 3px 3px;
+			background-size: 70%;
+		}
+    </style>
+</form>
+<div data-role=page id=win1>
+		<div data-role= header>
+			<h1 style="color:blue;font-family: Open Sans, Sans-Serif";> Menu </h1>
+		</div>
+		<div data-role="navbar">
+			<ol style="color:blue;font-family: Oswald, Sans-Serif" data-role="listview" ;>
+<li><a href="a.html" data-ajax="false">Tab one</a></li>
+<li><a href="b.html" data-ajax="false">Tab two</a></li>
+<li><a href="#" data-ajax="false">Tab three</a></li> </ol>
+
+</ul>
+<h2 style="color:violet;font-family: Bebas,Sans-Serif";> Materi PPM </h2>
+<p style="color:red;font-family: Amaranth, Sans-Serif ":30px;> Perkembangan Teknologi Mobile </p>
+<ul style="color:black;font-family: Helvetica Neue, Sans-Serif">
+	<li> 1G <br> Kelebihan :
+	Hanya mampu melayani komunikasi suara saja dan tidak dapat melayani komunikasi data dalam kecepatan tinggi dan besar. <br>
+	Kelemahan :
+	Hanya memiliki kapasitas trafik yang kecil, satu cell hanya mampu menampung sedikit pelanggan, penggunaan spektrum frekuensi yang boros, dan suara tidak jernih (derau intermodulasi).<br> </li>
+	<li> 2G <br> Berbasis CDMA <br>
+	CDMAone atau Interim Standard 95 (IS-95) atau IS-95 CDMA atau TIAEIA-95 di USA, Korea Selatan, Kanada, Mexiko, India, Israel, Australia, SriLanka, Venezuela, Brazil dan China. <br>
+	Kelebihan : <br>
+	Selain digunakan untuk komunikasi suara, juga bisa untuk SMS, voice mail, call waiting, dan transfer data dengan kecepatan 9,6 Kbps <br>
+	Kelemahan : <br>
+	Kecepatan transfer data yang masih rendah, tidak efisien digunakan pada trafik rendah dan jangkauan jaringan yang masih sangat terbatas karena bergantung pada BTS <br> </li>
+	<li> 2,5G <br> Peningkatan dari teknologi 2G terutama dalam platform dasar GSM telah mengalami penyempurnaan, khususnya untuk aplikasi data.
+ 	Untuk yang berbasis GSM teknologi 2.5G di implementasikan dalam GPRS (General Packet Radio Services) dan WiDEN, sedangkan yang berbasis CDMA 	diimplementasikan dalam CDMA2000 1x. <br>
+	GPRS (General Packet Radio Services). <br>
+	Merupakan teknologi overlay dimana disisipkan di atas jaringan GSM untuk menangani sebuah komunikasi data pada jaringan. Kecepatan transfer data GPRS mencapai hingga 160 Kbps. <br> </li>
+	<li> 3G <br> Kelebihan : <br>
+	Kualitas suara lebih bagus.<br>
+	Keamanan lebih terjamin. <br>
+	Kecepatan transfer data mencapai 2 Mbps untuk area lokal dan 384 Kbps untuk wide area access. <br>
+	Support beberapa koneksi secara simultan, sebagai contoh, pengguna dapat browse internet bersamaan dengan melalukan call (telepon) ke tujuan yang berbeda.<br>
+	Infrastruktur bersama dapat mensupport banyak operator dilokasi yang sama. Interkoneksi ke other mobile dan fixed users.
+	Roaming nasional dan internasional. <br>
+	Bisa menangani packet-and circuit-switched service termasuk internet (IP) dan video conferencing. Juga high data rate communication services dan asymetric data transmission. <br>
+	Efisiensi spektrum yang bagus, sehingga dapat menggunakan secara maksimum bandwidth yang terbatas. <br>
+	Mekanisme billing yang baru tergantung dari volume data, kualitas service dan waktu. <br> <br>
+
+	Definisi Kerja 3G menurut ITU (Intenational Telecomunication Union) mendefisikan 3G (Third Generation) : <br>
+	Mempunyai kecepatan transfer data sebesar 144 kbps pada kecepatan user 100 km/jam. <br>
+	Mempunyai kecepatan transfer data sebesar 384 kbps pada kecepatan berjalan kaki.<br>
+	Mempunyai kecepatan transfer data sebesar 2 Mbps pada untuk user diam (stasioner). <br> </li>
+	<li> 4G <br> Nama resmi dari teknologi 4G ini menurut IEEE 
+      adalah “3G and beyond”. <br>
+	Sebelum 4G, High-Speed Downlink Packet Access (HSDPA) yang kadangkala disebut sebagai teknologi 3,5G telah dikembangkan oleh WCDMA sama seperti EV-DO mengembangkan CDMA2000 <br>
+	4G menyediakan solusi IP yang komprehensif dimana suara, data, dan arus multimedia dapat sampai kepada pengguna kapan saja dan dimana saja, pada rata-rata data lebih tinggi dari generasi sebelumnya. <br>
+	Beberapa teknologi pendukung generasi jaringan 4G: <br>
+	Long Term Evolution (LTE) <br>
+	Ultra Mobile Broadband (UMB) <br>
+	Mobile Wimax II (IEEE 802.16m) <br>
+	Kelebihan 4G LTE : <br>
+	Tingkat download sampai dengan 299.6 Mbis/s dan tingkat upload gingga 75.5 Mbis/s tergantung pada kategori perangkat yang digunakan.
+	Peningkatan dukungan untuk mobilitas, sebagai contoh dukungan untuk terminal bergerak hingga 350 km/jam atau 500 km/jam tergantung pita frekuensi. <br>
+	Dukungan untuk semua gelombang frekuensi yang saat ini digunakan oleh sistem IMT dan ITU-R.
+	Di daerah kota dan perkotaan, frekuensi band yang lebih tinggi (seperti 2.6 GHz di Uni Eropa) digunakan untuk mendukung kecepatan tinggi mobile broadband.<br>
+	Dukungan untuk MBSFN (Multicast Broadcast Single Frequency Network). Fitur ini dapat memberikan layanan seperti Mobile TV menggunakan infrastruktur LTE, dan merupakan pesaing untuk layanan DVB-H berbasis siaran TV. <br> </li>
+	<li> 5G <br> Teknologi 5G belum dapat dipastikan seperti apa keunggulan dan kekurangannya karena saat ini hal itu masih berupa konsep. <br>
+
+	Tujuan utama dari teknologi 5G, yaitu: <br>
+	Kecepatan data yang lebih signifikan dari 4G. <br>
+	Memiliki transfer data dari satu telepon ke telepon lain dengan kecepatan satu milidetik. <br>
+	Dapat terkoneksi dengan alat seperti telepon, mobil, dan peralatan rumah tangga. <br>
+	Teknologi 5G diprediksi memiliki kecepatan sekitar 800Gbps, atau seratus kali lebih cepat dari kecepatan generasi sebelumnya. Dengan kecapatan seperti itu, teknologi 5G bisa memungkinkan untuk mengunduh 33 film High Definition hanya dalam beberapa detik <br> </li>
+
+
+
+
+
+
+
+
+
+
